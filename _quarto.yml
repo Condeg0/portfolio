@@ -4,12 +4,13 @@ project:
 
 website:
   title: "Rafael Condé Gomes"
-  site-url: "https://condeg0.github.io/RafaelCondeGomes" # Explicitly sets the base URL
+  site-url: "https://condeg0.github.io/RafaelCondeGomes"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      # Additional links here!!!
+      - href: about.qmd
+        text: About
 
 execute:
   freeze: auto
