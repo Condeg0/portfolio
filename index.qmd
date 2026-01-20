@@ -3,7 +3,4 @@ title: "Rafael Condé Gomes"
 ---
 
 ## Portfolio
-Here are my projects in quantitative finance and data science.
-
-* [Uber NYC Analysis](uber_analysis.ipynb)
-* [Tennis Match Forecasting](tennis_lstm.ipynb)
+This is the beginning of my portfolio where I will display all my projects!
