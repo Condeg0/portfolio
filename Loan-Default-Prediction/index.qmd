@@ -10,6 +10,7 @@ Standard credit risk models optimize for accuracy (F1-score), treating a $500 de
 
 # The Solution
 I built a custom "Profit-Centric" optimization engine that:
+
 1.  **Re-engineers the Target:** Shifts focus from "Did they default?" to "What is the Expected Loss?"
 2.  **Simulates P&L:** Calculates the "Efficient Frontier" of approval rates.
 3.  **Optimizes Decisioning:** Recommends a cutoff that maximizes Net Portfolio Profit.
