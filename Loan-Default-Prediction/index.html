@@ -176,6 +176,15 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p><em>Figure 1: By shifting the approval threshold from 100% to 82.7%, we avoid the “tail risk” (massive losses) while retaining the profitable core.</em></p>
+</section>
+<section id="technical-architecture" class="level1">
+<h1>Technical Architecture</h1>
+<p>This was not just a notebook experiment. I built a modular Python package to handle the pipeline: * <strong>Pipelines:</strong> Custom <code>scikit-learn</code> transformers to prevent data leakage. * <strong>Feature Engineering:</strong> Derived financial metrics (Principal, Installment-to-Income) using annuity formulas. * <strong>Explainability:</strong> Used SHAP values to prove that FICO and Inquiry Velocity are the primary risk drivers.</p>
+</section>
+<section id="view-the-code" class="level1">
+<h1>View the Code</h1>
+<p>This project is structured as a production-ready Python package.</p>
+<p><a href="https://github.com/Condeg0/Loan-Default-Prediction" class="btn btn-primary" role="button"><i class="bi bi-github"></i> View on GitHub</a></p>
 
 
 </section>
