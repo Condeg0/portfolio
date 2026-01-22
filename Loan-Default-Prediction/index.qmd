@@ -118,6 +118,7 @@ The analysis revealed a convex profit curve.
 :::
 **Managerial Conclusion:** The optimal policy is strict but not draconian. We should approve the safest ~83% of applicants. This creates a projected 40% increase in profitability compared to a naive strategy.
 :::
+
 ---
 
 # 5. Key Risk Drivers (Interpretation)
