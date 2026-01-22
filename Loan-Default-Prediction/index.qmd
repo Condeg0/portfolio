@@ -26,6 +26,7 @@ The model identified **$1.26M in uncaptured value** and projected a **40% ROI li
 
 # Technical Architecture
 This was not just a notebook experiment. I built a modular Python package to handle the pipeline:
+
 * **Pipelines:** Custom `scikit-learn` transformers to prevent data leakage.
 * **Feature Engineering:** Derived financial metrics (Principal, Installment-to-Income) using annuity formulas.
 * **Explainability:** Used SHAP values to prove that FICO and Inquiry Velocity are the primary risk drivers.
