@@ -22,3 +22,14 @@ The model identified **$1.26M in uncaptured value** and projected a **40% ROI li
 ![The Efficiency Frontier: Finding the optimal approval rate](LogReg-StrategyCurve.png)
 
 *Figure 1: By shifting the approval threshold from 100% to 82.7%, we avoid the "tail risk" (massive losses) while retaining the profitable core.*
+
+# Technical Architecture
+This was not just a notebook experiment. I built a modular Python package to handle the pipeline:
+* **Pipelines:** Custom `scikit-learn` transformers to prevent data leakage.
+* **Feature Engineering:** Derived financial metrics (Principal, Installment-to-Income) using annuity formulas.
+* **Explainability:** Used SHAP values to prove that FICO and Inquiry Velocity are the primary risk drivers.
+
+# View the Code
+This project is structured as a production-ready Python package.
+
+[<i class="bi bi-github"></i> View on GitHub](https://github.com/Condeg0/Loan-Default-Prediction){.btn .btn-primary role="button"}
