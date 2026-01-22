@@ -31,7 +31,7 @@ In credit risk, confusion matrix errors are not created equal:
 * **False Positive (Type I Error):** We reject a good applicant. *Cost = Opportunity Cost of Interest.*
 * **False Negative (Type II Error):** We approve a defaulter. *Cost = Loss of Principal.*
 
-Since the Principal is significantly larger than the Interest, avoiding False Negatives is mathematically more critical than avoiding False Positives. Standard "out-of-the-box" machine learning models often fail to capture this asymmetry.
+Since the Principal is significantly larger than the Interest, avoiding False Negatives is mathematically more critical than avoiding False Positives. Standard "out-of-the-box" machine learning models often fail to capture this asymmetry by themselves.
 
 ### The Objective
 Build a system that answers: **"What is the exact probability threshold that maximizes Net Portfolio Profit?"**
