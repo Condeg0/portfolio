@@ -4,3 +4,5 @@ title: "Rafael Condé Gomes"
 
 ## Portfolio
 This is the beginning of my portfolio where I will display all my projects!
+
+[Loan Default Prediction](Loan-Default-Prediction/index.qmd)
