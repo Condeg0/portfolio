@@ -7,7 +7,6 @@ format:
   html:
     toc: true
     code-fold: true
-    code-tools: true
 ---
 
 # Executive Summary
