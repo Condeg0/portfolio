@@ -1,7 +1,6 @@
 ---
 title: "Rafael Condé Gomes"
-subtitle: *Econometrics & Quantitative Economics and Information Science with a concentration in Data Science & Analytics*
-tags: [Data Science, Econometrics, Quantitative Finance]
+subtitle: Econometrics & Quantitative Economics and Information Science (concentration in Data Science & Analytics)
 ---
 
 ## Portfolio
