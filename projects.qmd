@@ -3,5 +3,4 @@ title: "Projects"
 ---
 
 * [Loan Deault Analysis](./Loan-Default-Prediction/index.qmd)
-Testing this
 
