@@ -7,10 +7,16 @@ about:
   links:
     - icon: file-code
       text: Portfolio
-      href: projects.qmd
+      href: ./projects.qmd
     - icon: linkedin
       text: Linkedin
       href: https://www.linkedin.com/in/rafael-conde-878284250/
+    - icon: github
+      text: Github
+      href: https://github.com/Condeg0
+    - icon: envelope
+      text: Email
+      email: mailto:conde31@usf.edu
 ---
 
 ## Data Scientist & Quantitative Analyst
