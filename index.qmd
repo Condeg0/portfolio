@@ -18,19 +18,19 @@ about:
 
 ## Data Scientist & Quantitative Analyst
 
-I am a final-year double major in **Econometrics** and **Information Science (Data Science)** at the University of South Florida.
+I am a double major in **Econometrics** and **Information Science (concentration in Data Science & Analytics)** at the University of South Florida (Class of 2026)
 
-**Valid decisions require solid evidence, yet they are rarely based on it.**
+**I believe valid decisions require solid evidence, yet they are rarely based on it.**
 
-My focus is bridging that gap. I combine **econometric rigor** with **computational data science** to transform ambiguity into actionable intelligence. My goal is to replace intuition with inference, helping organizations optimize efficiency and solve complex real-world problems with precision.
+My focus is bridging that gap. I combine **econometric rigor** with **data science** to transform ambiguity into actionable insights. My goal is to replace intuition with inference, helping organizations optimize efficiency and solve complex real-world problems with precision.
 
-### Professional Experience
-- **Technology Director** | Hexa Consulting
+### Experience
+- **Technology Director** | Hexa Junior Consulting Company
 - **Research Associate** | USF Student Investment Club (Macroeconomics)
+- **Tutor** | University of South Florida Athletics
 
 ### Key Projects
 - **Credit Risk Optimization:** Developed a profit-maximizing threshold model for loan default prediction.
-- **Tail Hedging Strategy:** Quantitative analysis of convex strategies for portfolio protection.
 
 ::: {.callout-note appearance="minimal"}
 **Portfolio & Code:** View my technical projects [here](./projects.qmd).
