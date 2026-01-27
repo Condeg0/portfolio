@@ -18,35 +18,35 @@
     "href": "Uber-NYC-Analysis/index.html#geographic-distribution",
     "title": "Uber NYC Demand Analysis (Apr–Sep 2014)",
     "section": "1. Geographic Distribution",
-    "text": "1. Geographic Distribution\nQuestion: Is demand spread evenly across the city?\n\nFinding: The pickup density is heavily skewed. * Manhattan Core: The vast majority of rides occur in Manhattan (below 59th St) and Downtown Brooklyn. * Airport Clusters: Outside the city grid, the only significant hotspots are JFK and LaGuardia Airports. * Operational Insight: For a driver, leaving Manhattan without an airport fare is statistically inefficient, as return trips from outer boroughs are rare."
+    "text": "1. Geographic Distribution\nQuestion: Is demand spread evenly across the city?\n\nFinding: The pickup density is heavily skewed.\n\nManhattan Core: The vast majority of rides occur in Manhattan (below 59th St) and Downtown Brooklyn.\nAirport Clusters: Outside the city grid, the only significant hotspots are JFK and LaGuardia Airports.\nOperational Insight: For a driver, leaving Manhattan without an airport fare is statistically inefficient, as return trips from outer boroughs are rare."
   },
   {
     "objectID": "Uber-NYC-Analysis/index.html#hourly-demand-patterns",
     "href": "Uber-NYC-Analysis/index.html#hourly-demand-patterns",
     "title": "Uber NYC Demand Analysis (Apr–Sep 2014)",
     "section": "2. Hourly Demand Patterns",
-    "text": "2. Hourly Demand Patterns\nQuestion: Is there a consistent “best time” to drive?\n\nFinding: Demand follows a strict daily cycle that is consistent across all six months (Apr–Sep). * The Build-Up: Ride volume begins to rise significantly at 16:00 (4 PM). * The Peak: The busiest hour is consistently 17:00–18:00 (5–6 PM), coinciding with the end of the traditional workday. * Late Night: Demand tapers off after 21:00, except on weekends (see below)."
+    "text": "2. Hourly Demand Patterns\nQuestion: Is there a consistent “best time” to drive?\n\nFinding:Demand follows a strict daily cycle that is consistent across all six months (Apr–Sep).\n\nThe Build-Up: Ride volume begins to rise significantly at 16:00 (4 PM).\nThe Peak: The busiest hour is consistently 17:00–18:00 (5–6 PM), coinciding with the end of the traditional workday.\nLate Night: Demand tapers off after 21:00, except on weekends (see below)."
   },
   {
     "objectID": "Uber-NYC-Analysis/index.html#heatmap-analysis-day-vs.-hour",
     "href": "Uber-NYC-Analysis/index.html#heatmap-analysis-day-vs.-hour",
     "title": "Uber NYC Demand Analysis (Apr–Sep 2014)",
     "section": "3. Heatmap Analysis: Day vs. Hour",
-    "text": "3. Heatmap Analysis: Day vs. Hour\nQuestion: How does the schedule change from Tuesday to Saturday?\n\nFinding: Aggregating data by day of the week reveals two distinct distinct “shifts”: 1. The Commuter Shift (Mon–Thu): Demand is strictly focused on rush hours (07:00–09:00 and 17:00–19:00). 2. The Nightlife Shift (Fri–Sat): The evening peak extends well past midnight, staying high until 02:00 AM.\nBusiness Implication: Algorithms should prioritize “commuter” routes during the week but switch to “entertainment district” positioning on Friday nights."
+    "text": "3. Heatmap Analysis: Day vs. Hour\nQuestion: How does the schedule change from Tuesday to Saturday?\n\nFinding: Aggregating data by day of the week reveals two distinct distinct “shifts”:\n\nThe Commuter Shift (Mon–Thu): Demand is strictly focused on rush hours (07:00–09:00 and 17:00–19:00).\nThe Nightlife Shift (Fri–Sat): The evening peak extends well past midnight, staying high until 02:00 AM.\n\nBusiness Implication: Algorithms should prioritize “commuter” routes during the week but switch to “entertainment district” positioning on Friday nights."
   },
   {
     "objectID": "Uber-NYC-Analysis/index.html#base-growth-fleet-scaling",
     "href": "Uber-NYC-Analysis/index.html#base-growth-fleet-scaling",
     "title": "Uber NYC Demand Analysis (Apr–Sep 2014)",
     "section": "4. Base Growth (Fleet Scaling)",
-    "text": "4. Base Growth (Fleet Scaling)\nQuestion: Are all Uber bases growing at the same rate?\n\nFinding: While most bases (like B02598 and B02682) showed stable monthly volume, Base B02617 (Teal) grew exponentially. * April: ~30k trips * September: ~180k trips * This suggests that Uber likely consolidated drivers into this specific base or ran an aggressive onboarding campaign during the summer of 2014."
+    "text": "4. Base Growth (Fleet Scaling)\nQuestion: Are all Uber bases growing at the same rate?\n\nFinding: While most bases (like B02598 and B02682) showed stable monthly volume, Base B02617 (Teal) grew exponentially.\n\nApril: ~30k trips\nSeptember: ~180k trips\nThis suggests that Uber likely consolidated drivers into this specific base or ran an aggressive onboarding campaign during the summer of 2014."
   },
   {
     "objectID": "Uber-NYC-Analysis/index.html#technical-implementation",
     "href": "Uber-NYC-Analysis/index.html#technical-implementation",
     "title": "Uber NYC Demand Analysis (Apr–Sep 2014)",
     "section": "Technical Implementation",
-    "text": "Technical Implementation\nStack: R, RStudio Key Libraries: * ggplot2: Used for the heatmaps and bar charts. * lubridate: Parsed the timestamps to extract Hour, Day, and Month factors. * dplyr: Grouped the 4.5M rows for aggregation.\n```r # Code used to generate the Hourly Histogram hour_data &lt;- data_2014 %&gt;% group_by(Hour) %&gt;% dplyr::summarize(Total = n())\nggplot(data = hour_data, aes(x = Hour, y = Total)) + geom_bar(stat = “identity”, fill = “lightblue”, color = “red”) + ggtitle(“Trips By Hour”)"
+    "text": "Technical Implementation\nStack: R, RStudio Key Libraries:\n\nggplot2: Used for the heatmaps and bar charts.\nlubridate: Parsed the timestamps to extract Hour, Day, and Month factors.\ndplyr: Grouped the 4.5M rows for aggregation."
   },
   {
     "objectID": "about.html",

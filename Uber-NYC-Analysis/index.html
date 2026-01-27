@@ -172,21 +172,35 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="geographic-distribution">1. Geographic Distribution</h2>
 <p><strong>Question:</strong> Is demand spread evenly across the city?</p>
 <p><img src="NYC Uber Rise Map.png" class="img-fluid"></p>
-<p><strong>Finding:</strong> The pickup density is heavily skewed. * <strong>Manhattan Core:</strong> The vast majority of rides occur in Manhattan (below 59th St) and Downtown Brooklyn. * <strong>Airport Clusters:</strong> Outside the city grid, the only significant hotspots are <strong>JFK</strong> and <strong>LaGuardia Airports</strong>. * <strong>Operational Insight:</strong> For a driver, leaving Manhattan without an airport fare is statistically inefficient, as return trips from outer boroughs are rare.</p>
+<p><strong>Finding:</strong> The pickup density is heavily skewed.</p>
+<ul>
+<li><strong>Manhattan Core:</strong> The vast majority of rides occur in Manhattan (below 59th St) and Downtown Brooklyn.</li>
+<li><strong>Airport Clusters:</strong> Outside the city grid, the only significant hotspots are <strong>JFK</strong> and <strong>LaGuardia Airports</strong>.</li>
+<li><strong>Operational Insight:</strong> For a driver, leaving Manhattan without an airport fare is statistically inefficient, as return trips from outer boroughs are rare.</li>
+</ul>
 <hr>
 </section>
 <section id="hourly-demand-patterns" class="level2">
 <h2 class="anchored" data-anchor-id="hourly-demand-patterns">2. Hourly Demand Patterns</h2>
 <p><strong>Question:</strong> Is there a consistent “best time” to drive?</p>
 <p><img src="Trips by Hours and Month.png" class="img-fluid"></p>
-<p><strong>Finding:</strong> Demand follows a strict daily cycle that is consistent across all six months (Apr–Sep). * <strong>The Build-Up:</strong> Ride volume begins to rise significantly at <strong>16:00 (4 PM)</strong>. * <strong>The Peak:</strong> The busiest hour is consistently <strong>17:00–18:00 (5–6 PM)</strong>, coinciding with the end of the traditional workday. * <strong>Late Night:</strong> Demand tapers off after 21:00, except on weekends (see below).</p>
+<p><strong>Finding:</strong>Demand follows a strict daily cycle that is consistent across all six months (Apr–Sep).</p>
+<ul>
+<li><strong>The Build-Up:</strong> Ride volume begins to rise significantly at <strong>16:00 (4 PM)</strong>.</li>
+<li><strong>The Peak:</strong> The busiest hour is consistently <strong>17:00–18:00 (5–6 PM)</strong>, coinciding with the end of the traditional workday.</li>
+<li><strong>Late Night:</strong> Demand tapers off after 21:00, except on weekends (see below).</li>
+</ul>
 <hr>
 </section>
 <section id="heatmap-analysis-day-vs.-hour" class="level2">
 <h2 class="anchored" data-anchor-id="heatmap-analysis-day-vs.-hour">3. Heatmap Analysis: Day vs.&nbsp;Hour</h2>
 <p><strong>Question:</strong> How does the schedule change from Tuesday to Saturday?</p>
 <p><img src="Heat Map by Hour and Day of Week.png" class="img-fluid"></p>
-<p><strong>Finding:</strong> Aggregating data by day of the week reveals two distinct distinct “shifts”: 1. <strong>The Commuter Shift (Mon–Thu):</strong> Demand is strictly focused on rush hours (07:00–09:00 and 17:00–19:00). 2. <strong>The Nightlife Shift (Fri–Sat):</strong> The evening peak extends well past midnight, staying high until <strong>02:00 AM</strong>.</p>
+<p><strong>Finding:</strong> Aggregating data by day of the week reveals two distinct distinct “shifts”:</p>
+<ol type="1">
+<li><strong>The Commuter Shift (Mon–Thu):</strong> Demand is strictly focused on rush hours (07:00–09:00 and 17:00–19:00).</li>
+<li><strong>The Nightlife Shift (Fri–Sat):</strong> The evening peak extends well past midnight, staying high until <strong>02:00 AM</strong>.</li>
+</ol>
 <p><strong>Business Implication:</strong> Algorithms should prioritize “commuter” routes during the week but switch to “entertainment district” positioning on Friday nights.</p>
 <hr>
 </section>
@@ -194,14 +208,22 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="base-growth-fleet-scaling">4. Base Growth (Fleet Scaling)</h2>
 <p><strong>Question:</strong> Are all Uber bases growing at the same rate?</p>
 <p><img src="Trips by Base and Month.png" class="img-fluid"></p>
-<p><strong>Finding:</strong> While most bases (like B02598 and B02682) showed stable monthly volume, <strong>Base B02617 (Teal)</strong> grew exponentially. * <strong>April:</strong> ~30k trips * <strong>September:</strong> ~180k trips * This suggests that Uber likely consolidated drivers into this specific base or ran an aggressive onboarding campaign during the summer of 2014.</p>
+<p><strong>Finding:</strong> While most bases (like B02598 and B02682) showed stable monthly volume, <strong>Base B02617 (Teal)</strong> grew exponentially.</p>
+<ul>
+<li><strong>April:</strong> ~30k trips</li>
+<li><strong>September:</strong> ~180k trips</li>
+<li>This suggests that Uber likely consolidated drivers into this specific base or ran an aggressive onboarding campaign during the summer of 2014.</li>
+</ul>
 <hr>
 </section>
 <section id="technical-implementation" class="level2">
 <h2 class="anchored" data-anchor-id="technical-implementation">Technical Implementation</h2>
-<p><strong>Stack:</strong> R, RStudio <strong>Key Libraries:</strong> * <code>ggplot2</code>: Used for the heatmaps and bar charts. * <code>lubridate</code>: Parsed the timestamps to extract Hour, Day, and Month factors. * <code>dplyr</code>: Grouped the 4.5M rows for aggregation.</p>
-<p>```r # Code used to generate the Hourly Histogram hour_data &lt;- data_2014 %&gt;% group_by(Hour) %&gt;% dplyr::summarize(Total = n())</p>
-<p>ggplot(data = hour_data, aes(x = Hour, y = Total)) + geom_bar(stat = “identity”, fill = “lightblue”, color = “red”) + ggtitle(“Trips By Hour”)</p>
+<p><strong>Stack:</strong> R, RStudio <strong>Key Libraries:</strong></p>
+<ul>
+<li><code>ggplot2</code>: Used for the heatmaps and bar charts.</li>
+<li><code>lubridate</code>: Parsed the timestamps to extract Hour, Day, and Month factors.</li>
+<li><code>dplyr</code>: Grouped the 4.5M rows for aggregation.</li>
+</ul>
 
 
 </section>
