@@ -28,7 +28,7 @@ The first step in allocation strategy is defining the operational boundary.
 **Analysis:**
 
 The visualization above plots raw latitude/longitude pickup data.
-* **The "Manhattan Grid":** 90% of liquidity is concentrated in Manhattan (below 59th St) and Downtown Brooklyn.
+* **The "Manhattan Grid":** 81.2% of liquidity is concentrated in Manhattan (below 59th St) and Downtown Brooklyn.
 * **Airport Corridors:** Distinct clusters appear at JFK and LaGuardia, representing high-value, long-distance fares that require separate queuing logic compared to the short-hop Manhattan traffic.
 
 ---
