@@ -2,16 +2,37 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Rafael Condé Gomes",
+    "title": "About Me",
     "section": "",
-    "text": "I am a double major in Econometrics & Quantitative Economics and Information Science (concentration in Data Science & Analytics) at the University of South Florida (Class of 2026), focusing on data science & machine learning.\n\n\n\nTechnology Director | Hexa Consulting\nResearch Associate | USF Student Investment Club (Macroeconomics)\n\n\n\n\n\nData Science: Python, R, Statistical Inference.\n\n\n\n\n\n\n\nLooking for my code? Check the Projects tab or my GitHub."
+    "text": "I am an aspiring Data Scientist and Quantitative Analyst with a rigorous academic background in both economic theory and data science. My objective is to leverage statistical modeling and machine learning to drive actionable insights in business.\nI am currently finishing my dual degree at the University of South Florida (May 2026) with a 3.89 GPA."
   },
   {
-    "objectID": "about.html#econometrics-data-science",
-    "href": "about.html#econometrics-data-science",
-    "title": "Rafael Condé Gomes",
+    "objectID": "about.html#professional-profile",
+    "href": "about.html#professional-profile",
+    "title": "About Me",
     "section": "",
-    "text": "I am a double major in Econometrics & Quantitative Economics and Information Science (concentration in Data Science & Analytics) at the University of South Florida (Class of 2026), focusing on data science & machine learning.\n\n\n\nTechnology Director | Hexa Consulting\nResearch Associate | USF Student Investment Club (Macroeconomics)\n\n\n\n\n\nData Science: Python, R, Statistical Inference.\n\n\n\n\n\n\n\nLooking for my code? Check the Projects tab or my GitHub."
+    "text": "I am an aspiring Data Scientist and Quantitative Analyst with a rigorous academic background in both economic theory and data science. My objective is to leverage statistical modeling and machine learning to drive actionable insights in business.\nI am currently finishing my dual degree at the University of South Florida (May 2026) with a 3.89 GPA."
+  },
+  {
+    "objectID": "about.html#research-interests",
+    "href": "about.html#research-interests",
+    "title": "About Me",
+    "section": "Research Interests",
+    "text": "Research Interests\nMy academic and project work is driven by a focus on market behavior and risk:\n\nQuantitative Finance: Application of Monte Carlo simulations and stochastic calculus to option pricing.\nRisk Management: Interest in tail-risk management and non-Gaussian market distributions (referencing frameworks by N. Taleb and O. Peters).\nMachine Learning: Utilizing LSTMs and Random Forests for time-series forecasting and classification."
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "About Me",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\n\n\n\n\n\n\nDomain\nStack\n\n\n\n\nProgramming\nPython (Pandas, NumPy), R, SQL\n\n\nData Science\nPyTorch, Scikit-Learn, TensorFlow, Statsmodels\n\n\nMethods\nRandom Forests, Linear Regressions, Decision Trees, Neural Networks, ARIMA, ARMA, VAR,Monte Carlo Methods\n\n\nTools/Dev\nGit, Unix/Linux, Quarto"
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About Me",
+    "section": "Background",
+    "text": "Background\n\nCompetitive Athletics: Former top-ranked junior tennis athlete (Brazil). This background has fostered a disciplined, goal-oriented approach to my professional work.\nLanguages: Portuguese (Native), English (Fluent), Spanish (Conversational)."
   },
   {
     "objectID": "Loan-Default-Prediction/index.html",
