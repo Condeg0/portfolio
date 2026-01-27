@@ -1,6 +1,6 @@
 ---
 title: "Rafael Condé Gomes"
-image: artifacts/IMG_6178.JPG
+image:   artifacts/IMG_6178.JPG
 about:
   template: trestles
   image-shape: round
@@ -10,7 +10,7 @@ about:
       href: projects.qmd
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/rafael-conde-878284250/
+      href: https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE
     - icon: github
       text: Github
       href: https://github.com/condeg0
@@ -19,10 +19,9 @@ about:
       href: mailto:conde31@usf.edu
 ---
 
-
 ## Data Scientist & Quantitative Analyst
 
-I am a final-year double major in **Econometrics & Quantitative Economics** and **Information Science (concentration in Data Science & Analytics)** at University of South Florida.
+I am a final-year double major in **Econometrics** and **Information Science (Data Science)** at the University of South Florida.
 
 **Valid decisions require solid evidence, yet they are rarely based on it.**
 
@@ -35,7 +34,3 @@ My focus is bridging that gap. I combine **econometric rigor** with **computatio
 ### Key Projects
 - **Credit Risk Optimization:** Developed a profit-maximizing threshold model for loan default prediction.
 - **Tail Hedging Strategy:** Quantitative analysis of convex strategies for portfolio protection.
-
-::: {.callout-note appearance="minimal"}
-**Portfolio & Code:** View my technical projects [here](./projects.qmd).
-:::
