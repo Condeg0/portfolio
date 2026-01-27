@@ -18,8 +18,6 @@ Optimizing fleet allocation requires understanding the **spatiotemporal** behavi
 ---
 
 ## 1. Geospatial Liquidity Clusters
-**Professional Metric:** *Spatial Density Estimation*
-**(Code Title: "NYC Map Based on Uber Rides During Apr-2014 to Sep-2014")**
 
 The first step in allocation strategy is defining the operational boundary.
 
@@ -48,11 +46,10 @@ Demand is not random; it follows a "human" schedule. By stacking hourly volume a
 ---
 
 ## 3. Peak-Load Operational Matrix
-**Professional Metric:** *Day-Hour Heatmap*
 
 Aggregates lie; granular data tells the truth. This heatmap exposes the specific windows of highest opportunity cost.
 
-![](Heat Map by Hours and Day.png)
+![](Heat Map by Hour and Day of Week.png)
 
 **Analysis:**
 
@@ -64,7 +61,6 @@ Aggregates lie; granular data tells the truth. This heatmap exposes the specific
 ---
 
 ## 4. Fleet Scaling & Market Share
-**Professional Metric:** *Base Performance Growth*
 
 Demand analysis is useless without supply analysis. We tracked the pickup volume by "Base" (Uber's internal fleet codes).
 
