@@ -1,8 +1,8 @@
 ---
-title: "NYC Fleet Allocation & Demand Analysis"
+title: "Uber NYC Demand Analysis (Apr–Sep 2014)"
 author: "Rafael Condé Gomes"
 date: 2026-01-27
-categories: [R, ggplot2, lubridate, dplyr, Geospatial Analysis, Operational Research]
+categories: [R, Data Visualization, Geospatial Analysis]
 image: hero_map.png
 format:
   html:
@@ -10,72 +10,80 @@ format:
     code-fold: true
 ---
 
-## Executive Summary
-Optimizing fleet allocation requires understanding the **spatiotemporal** behaviors of urban populations. This project analyzes **4.5 million Uber pickups** (Apr–Sep 2014) to identify demand clusters, seasonal drift, and fleet scaling opportunities.
-
-**The Goal:** Move from reactive dispatching to predictive positioning.
+## Project Overview
+This project analyzes **4.5 million Uber pickups** in New York City to identify high-demand locations and time windows. Using **R (ggplot2, dplyr)**, I processed trip logs to answer three operational questions:
+1.  **Where** are pickups concentrated?
+2.  **When** does demand peak during the day?
+3.  **How** does fleet activity shift between weekdays and weekends?
 
 ---
 
-## 1. Geospatial Liquidity Clusters
-
-The first step in allocation strategy is defining the operational boundary.
+## 1. Geographic Distribution
+**Question:** Is demand spread evenly across the city?
 
 ![](NYC Uber Rise Map.png)
 
-**Analysis:**
-
-The visualization above plots raw latitude/longitude pickup data.
-* **The "Manhattan Grid":** 81.2% of liquidity is concentrated in Manhattan (below 59th St) and Downtown Brooklyn.
-* **Airport Corridors:** Distinct clusters appear at JFK and LaGuardia, representing high-value, long-distance fares that require separate queuing logic compared to the short-hop Manhattan traffic.
+**Finding:**
+The pickup density is heavily skewed.
+* **Manhattan Core:** The vast majority of rides occur in Manhattan (below 59th St) and Downtown Brooklyn.
+* **Airport Clusters:** Outside the city grid, the only significant hotspots are **JFK** and **LaGuardia Airports**.
+* **Operational Insight:** For a driver, leaving Manhattan without an airport fare is statistically inefficient, as return trips from outer boroughs are rare.
 
 ---
 
-## 2. Demand Seasonality
-**Professional Metric:** *Temporal Volume Distribution*
-
-Demand is not random; it follows a "human" schedule. By stacking hourly volume across the six month period, we isolate the "invariant" demand curve.
+## 2. Hourly Demand Patterns
+**Question:** Is there a consistent "best time" to drive?
 
 ![](Trips by Hours and Month.png)
 
-**Analysis:**
-
-* **The 17:00 Spike:** The data reveals a consistent surge beginning at 16:00 and peaking at 17:00-18:00 across all months (April through September).
-* **Operational Implication:** Fleet supply must be "pre-loaded" into the Manhattan Grid by 16:30. Drivers logging on after 17:00 are reacting to demand rather than capturing the initial surge.
+**Finding:**
+Demand follows a strict daily cycle that is consistent across all six months (Apr–Sep).
+* **The Build-Up:** Ride volume begins to rise significantly at **16:00 (4 PM)**.
+* **The Peak:** The busiest hour is consistently **17:00–18:00 (5–6 PM)**, coinciding with the end of the traditional workday.
+* **Late Night:** Demand tapers off after 21:00, except on weekends (see below).
 
 ---
 
-## 3. Peak-Load Operational Matrix
-
-Aggregates lie; granular data tells the truth. This heatmap exposes the specific windows of highest opportunity cost.
+## 3. Heatmap Analysis: Day vs. Hour
+**Question:** How does the schedule change from Tuesday to Saturday?
 
 ![](Heat Map by Hour and Day of Week.png)
 
-**Analysis:**
+**Finding:**
+Aggregating data by day of the week reveals two distinct distinct "shifts":
+1.  **The Commuter Shift (Mon–Thu):** Demand is strictly focused on rush hours (07:00–09:00 and 17:00–19:00).
+2.  **The Nightlife Shift (Fri–Sat):** The evening peak extends well past midnight, staying high until **02:00 AM**.
 
-* **The "Work Hard, Play Hard" Split:**
-    * **Weekdays:** Demand is strictly commuter-driven (07:00–09:00 and 17:00–19:00).
-    * **Weekends:** The pattern inverts. Friday and Saturday operational windows extend deep into the night (22:00–02:00), requiring shift incentives for late-night drivers.
-* **The Efficiency Void:** The block between 10:00 and 15:00 on weekdays represents "dead miles." Algorithms should deprioritize holding drivers in the city center during these hours.
+**Business Implication:** Algorithms should prioritize "commuter" routes during the week but switch to "entertainment district" positioning on Friday nights.
 
 ---
 
-## 4. Fleet Scaling & Market Share
-
-Demand analysis is useless without supply analysis. We tracked the pickup volume by "Base" (Uber's internal fleet codes).
+## 4. Base Growth (Fleet Scaling)
+**Question:** Are all Uber bases growing at the same rate?
 
 ![](Trips by Base and Month.png)
 
-**Analysis:**
-
-* **The "B02617" Anomaly:** While most bases showed steady performance, Base **B02617** (teal bar) demonstrated explosive month-over-month growth, overtaking the incumbent Base B02598 by September.
-* **Business Insight:** This suggests a successful aggressive onboarding strategy or a shift in dispatch priority logic implemented in July/August.
+**Finding:**
+While most bases (like B02598 and B02682) showed stable monthly volume, **Base B02617 (Teal)** grew exponentially.
+* **April:** ~30k trips
+* **September:** ~180k trips
+* This suggests that Uber likely consolidated drivers into this specific base or ran an aggressive onboarding campaign during the summer of 2014.
 
 ---
 
-## Technical Stack
-This analysis utilized the **R** statistical ecosystem for its superior handling of large-scale vector data.
+## Technical Implementation
+**Stack:** R, RStudio
+**Key Libraries:**
+* `ggplot2`: Used for the heatmaps and bar charts.
+* `lubridate`: Parsed the timestamps to extract Hour, Day, and Month factors.
+* `dplyr`: Grouped the 4.5M rows for aggregation.
 
-* **`ggplot2` & `ggthemes`:** For layering multidimensional data (Time + Location + Volume).
-* **`lubridate`:** For parsing 4.5M timestamps into actionable factor levels (Hour, Day, Month).
-* **`dplyr`:** For high-performance aggregation and grouping.
+```r
+# Code used to generate the Hourly Histogram
+hour_data <- data_2014 %>%
+  group_by(Hour) %>%
+  dplyr::summarize(Total = n())
+
+ggplot(data = hour_data, aes(x = Hour, y = Total)) +
+  geom_bar(stat = "identity", fill = "lightblue", color = "red") +
+  ggtitle("Trips By Hour")
