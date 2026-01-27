@@ -23,7 +23,7 @@ Optimizing fleet allocation requires understanding the **spatiotemporal** behavi
 
 The first step in allocation strategy is defining the operational boundary.
 
-![](hero_map.png)
+![](NYC Uber Rise Map.png)
 
 **Analysis:**
 The visualization above plots raw latitude/longitude pickup data.
@@ -38,7 +38,7 @@ The visualization above plots raw latitude/longitude pickup data.
 
 Demand is not random; it follows a strict human schedule. By stacking hourly volume across six months, we isolate the "invariant" demand curve.
 
-![](hourly_distribution.png)
+![](Trips by Base and Month.png)
 
 **Analysis:**
 * **The 5:00 PM Spike:** The data reveals a consistent surge beginning at 16:00 and peaking at 17:00-18:00 across all months (April through September).
@@ -52,7 +52,7 @@ Demand is not random; it follows a strict human schedule. By stacking hourly vol
 
 Aggregates lie; granular data tells the truth. This heatmap exposes the specific windows of highest opportunity cost.
 
-![](demand_heatmap.png)
+![](Heat Map by Hours and Day.png)
 
 **Analysis:**
 * **The "Work Hard, Play Hard" Split:**
@@ -68,7 +68,7 @@ Aggregates lie; granular data tells the truth. This heatmap exposes the specific
 
 Demand analysis is useless without supply analysis. We tracked the pickup volume by "Base" (Uber's internal fleet codes).
 
-![](base_growth.png)
+![](Trips by Base and Month.png)
 
 **Analysis:**
 * **The "B02617" Anomaly:** While most bases showed steady performance, Base **B02617** (teal bar) demonstrated explosive month-over-month growth, overtaking the incumbent Base B02598 by September.
