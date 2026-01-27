@@ -1,6 +1,25 @@
 ---
-title: "Projects"
+title: "Technical Projects"
+format:
+  html:
+    toc: false
 ---
 
-* [Loan Deault Analysis](./Loan-Default-Prediction/index.qmd)
+## Featured Case Studies
 
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### Optimizing Credit Risk: A Profit-First Approach
+![](https://placehold.co/600x400?text=Risk+Model) **Stack:** Python, Scikit-Learn, Pandas, Seaborn
+
+**The Problem:** Standard default prediction models maximize accuracy (AUC) but often fail to maximize *profit*. A bank loses more money on a False Negative (default) than it gains from a True Negative (repayment).
+
+**The Solution:**
+I engineered a **Threshold Optimization Engine** that shifts the decision boundary based on the specific cost-benefit matrix of the loan portfolio.
+
+* **Strategy:** Prioritized recall for high-risk segments to minimize costly defaults.
+* **Result:** While raw accuracy remained comparable to baseline, the **risk-adjusted revenue** improved significantly by rejecting "borderline" applicants that standard models would have accepted.
+
+[**View Full Analysis & Code &rarr;**](./Loan-Default-Prediction/index.html){.btn .btn-primary}
+:::
