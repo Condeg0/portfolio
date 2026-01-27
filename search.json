@@ -18,7 +18,7 @@
     "href": "Uber-NYC-Analysis/index.html#geospatial-liquidity-clusters",
     "title": "NYC Fleet Allocation & Demand Analysis",
     "section": "1. Geospatial Liquidity Clusters",
-    "text": "1. Geospatial Liquidity Clusters\nProfessional Metric: Spatial Density Estimation (Code Title: “NYC Map Based on Uber Rides During Apr-2014 to Sep-2014”)\nThe first step in allocation strategy is defining the operational boundary.\n\nAnalysis:\nThe visualization above plots raw latitude/longitude pickup data. * The “Manhattan Grid”: 90% of liquidity is concentrated in Manhattan (below 59th St) and Downtown Brooklyn. * Airport Corridors: Distinct clusters appear at JFK and LaGuardia, representing high-value, long-distance fares that require separate queuing logic compared to the short-hop Manhattan traffic."
+    "text": "1. Geospatial Liquidity Clusters\nProfessional Metric: Spatial Density Estimation (Code Title: “NYC Map Based on Uber Rides During Apr-2014 to Sep-2014”)\nThe first step in allocation strategy is defining the operational boundary.\n\nAnalysis:\nThe visualization above plots raw latitude/longitude pickup data. * The “Manhattan Grid”: 81.2% of liquidity is concentrated in Manhattan (below 59th St) and Downtown Brooklyn. * Airport Corridors: Distinct clusters appear at JFK and LaGuardia, representing high-value, long-distance fares that require separate queuing logic compared to the short-hop Manhattan traffic."
   },
   {
     "objectID": "Uber-NYC-Analysis/index.html#demand-seasonality",
