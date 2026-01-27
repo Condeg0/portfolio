@@ -5,6 +5,8 @@ about:
   template: trestles
   image-shape: round
   links:
+      text: Portfolio
+      href: projects.qmd
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/rafael-conde-878284250/
