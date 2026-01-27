@@ -18,28 +18,28 @@
     "href": "Uber-NYC-Analysis/index.html#geospatial-liquidity-clusters",
     "title": "NYC Fleet Allocation & Demand Analysis",
     "section": "1. Geospatial Liquidity Clusters",
-    "text": "1. Geospatial Liquidity Clusters\nProfessional Metric: Spatial Density Estimation (Code Title: “NYC Map Based on Uber Rides During Apr-2014 to Sep-2014”)\nThe first step in allocation strategy is defining the operational boundary.\n\nAnalysis: The visualization above plots raw latitude/longitude pickup data. * The “Manhattan Grid”: 90% of liquidity is concentrated in Manhattan (below 59th St) and Downtown Brooklyn. * Airport Corridors: Distinct clusters appear at JFK and LaGuardia, representing high-value, long-distance fares that require separate queuing logic compared to the short-hop Manhattan traffic."
+    "text": "1. Geospatial Liquidity Clusters\nProfessional Metric: Spatial Density Estimation (Code Title: “NYC Map Based on Uber Rides During Apr-2014 to Sep-2014”)\nThe first step in allocation strategy is defining the operational boundary.\n\nAnalysis:\nThe visualization above plots raw latitude/longitude pickup data. * The “Manhattan Grid”: 90% of liquidity is concentrated in Manhattan (below 59th St) and Downtown Brooklyn. * Airport Corridors: Distinct clusters appear at JFK and LaGuardia, representing high-value, long-distance fares that require separate queuing logic compared to the short-hop Manhattan traffic."
   },
   {
-    "objectID": "Uber-NYC-Analysis/index.html#circadian-rhythms-seasonality",
-    "href": "Uber-NYC-Analysis/index.html#circadian-rhythms-seasonality",
+    "objectID": "Uber-NYC-Analysis/index.html#demand-seasonality",
+    "href": "Uber-NYC-Analysis/index.html#demand-seasonality",
     "title": "NYC Fleet Allocation & Demand Analysis",
-    "section": "2. Circadian Rhythms & Seasonality",
-    "text": "2. Circadian Rhythms & Seasonality\nProfessional Metric: Temporal Volume Distribution (Code Title: “Trips by Hour and Month”)\nDemand is not random; it follows a strict human schedule. By stacking hourly volume across six months, we isolate the “invariant” demand curve.\n\nAnalysis: * The 5:00 PM Spike: The data reveals a consistent surge beginning at 16:00 and peaking at 17:00-18:00 across all months (April through September). * Operational Implication: Fleet supply must be “pre-loaded” into the Manhattan Grid by 16:30. Drivers logging on after 17:00 are reacting to demand rather than capturing the initial surge."
+    "section": "2. Demand Seasonality",
+    "text": "2. Demand Seasonality\nProfessional Metric: Temporal Volume Distribution\nDemand is not random; it follows a “human” schedule. By stacking hourly volume across the six month period, we isolate the “invariant” demand curve.\n\nAnalysis:\n\nThe 17:00 Spike: The data reveals a consistent surge beginning at 16:00 and peaking at 17:00-18:00 across all months (April through September).\nOperational Implication: Fleet supply must be “pre-loaded” into the Manhattan Grid by 16:30. Drivers logging on after 17:00 are reacting to demand rather than capturing the initial surge."
   },
   {
     "objectID": "Uber-NYC-Analysis/index.html#peak-load-operational-matrix",
     "href": "Uber-NYC-Analysis/index.html#peak-load-operational-matrix",
     "title": "NYC Fleet Allocation & Demand Analysis",
     "section": "3. Peak-Load Operational Matrix",
-    "text": "3. Peak-Load Operational Matrix\nProfessional Metric: Day-Hour Heatmap (Code Title: “Heat Map by Hour and Day”)\nAggregates lie; granular data tells the truth. This heatmap exposes the specific windows of highest opportunity cost.\n\nAnalysis: * The “Work Hard, Play Hard” Split: * Weekdays: Demand is strictly commuter-driven (07:00–09:00 and 17:00–19:00). * Weekends: The pattern inverts. Friday and Saturday operational windows extend deep into the night (22:00–02:00), requiring shift incentives for late-night drivers. * The Efficiency Void: The block between 10:00 and 15:00 on weekdays represents “dead miles.” Algorithms should deprioritize holding drivers in the city center during these hours."
+    "text": "3. Peak-Load Operational Matrix\nProfessional Metric: Day-Hour Heatmap\nAggregates lie; granular data tells the truth. This heatmap exposes the specific windows of highest opportunity cost.\n\nAnalysis:\n\nThe “Work Hard, Play Hard” Split:\n\nWeekdays: Demand is strictly commuter-driven (07:00–09:00 and 17:00–19:00).\nWeekends: The pattern inverts. Friday and Saturday operational windows extend deep into the night (22:00–02:00), requiring shift incentives for late-night drivers.\n\nThe Efficiency Void: The block between 10:00 and 15:00 on weekdays represents “dead miles.” Algorithms should deprioritize holding drivers in the city center during these hours."
   },
   {
     "objectID": "Uber-NYC-Analysis/index.html#fleet-scaling-market-share",
     "href": "Uber-NYC-Analysis/index.html#fleet-scaling-market-share",
     "title": "NYC Fleet Allocation & Demand Analysis",
     "section": "4. Fleet Scaling & Market Share",
-    "text": "4. Fleet Scaling & Market Share\nProfessional Metric: Base Performance Growth (Code Title: “Trips by Base and Month”)\nDemand analysis is useless without supply analysis. We tracked the pickup volume by “Base” (Uber’s internal fleet codes).\n\nAnalysis: * The “B02617” Anomaly: While most bases showed steady performance, Base B02617 (teal bar) demonstrated explosive month-over-month growth, overtaking the incumbent Base B02598 by September. * Business Insight: This suggests a successful aggressive onboarding strategy or a shift in dispatch priority logic implemented in July/August."
+    "text": "4. Fleet Scaling & Market Share\nProfessional Metric: Base Performance Growth\nDemand analysis is useless without supply analysis. We tracked the pickup volume by “Base” (Uber’s internal fleet codes).\n\nAnalysis:\n\nThe “B02617” Anomaly: While most bases showed steady performance, Base B02617 (teal bar) demonstrated explosive month-over-month growth, overtaking the incumbent Base B02598 by September.\nBusiness Insight: This suggests a successful aggressive onboarding strategy or a shift in dispatch priority logic implemented in July/August."
   },
   {
     "objectID": "Uber-NYC-Analysis/index.html#technical-stack",
